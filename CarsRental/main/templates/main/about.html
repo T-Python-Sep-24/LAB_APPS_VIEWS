@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+<style>
+
+p {
+        color: black;
+        background-color: powderblue;      
+        font-size: 16px;  
+    }
+
+</style>
+   
+</head> 
+<body>
+
+    <p>Car rentals provide a convenient solution for travelers, offering temporary access to vehicles without the long-term commitment of ownership.
+        <br>Whether for business trips, vacations, or simply exploring a new city, renting a car allows individuals the freedom to move at their own pace.
+        <br>With various car types available, customers can choose from economy, luxury, or family-sized vehicles based on their needs and budget.
+    </p>
+
+    <a href="{% url 'main:password_view' %}">Dynamic Link to Password Generator</a>
+ <br>
+
+    <img src="{% static 'images/about us.jpeg' %}" alt="About Us Image" />
+
+</body>   
+</html>

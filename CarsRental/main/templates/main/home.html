@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+<style>
+p {
+    color: blue;
+    font-size: 16px;
+    font-weight: bold;  
+}
+        
+</style>
+</head>
+<body>
+
+    <h1>Hello World!</h1>
+
+    <nav>
+        <!-- Dynamic links to About and Password Generator pages -->
+        <a href="{% url 'main:about_view' %}">About Us</a> |
+        <a href="{% url 'main:password_view' %}">Password Generator</a>
+    </nav>
+
+    <p>This is my new HOME for Car Rentals Website.
+        <br>We're excited to welcome you here.
+
+    </p>
+    
+</body>
+</html>
