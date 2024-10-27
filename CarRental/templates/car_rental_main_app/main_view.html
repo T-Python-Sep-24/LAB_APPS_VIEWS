@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+    <nav>
+        <a href="{% url 'car_rental_main_app:main_view' %}"> <img src="{% static 'images/carLogo.jpg' %}"/></a>
+        <a href="{% url 'car_rental_main_app:about_view' %}">About Us</a>
+        <a href="{% url 'car_rental_main_app:pass_gen_view' %}">Password Generator</a>
+    </nav>
+    <h1 style='text-align: center'> Welcome To TuwWheels Car Rental</h1>
+</body>
+</html>

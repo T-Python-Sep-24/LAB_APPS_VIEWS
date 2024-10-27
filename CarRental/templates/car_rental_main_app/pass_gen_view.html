@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+    <nav>
+        <a href="{% url 'car_rental_main_app:main_view' %}"> <img src="{% static 'images/carLogo.jpg' %}"/></a>
+        <a href="{% url 'car_rental_main_app:main_view' %}">Home</a>
+        <a href="{% url 'car_rental_main_app:about_view' %}">About Us</a>
+    </nav>
+    <h1 style='position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%)'> New Password: <code style = 'background-color: red'>{{pass}} </code></h1>
+</body>
+</html>
