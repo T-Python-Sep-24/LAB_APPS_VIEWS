@@ -1,0 +1,18 @@
+{% load static %} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name = "viweport" content="width=device-width, inittial-scale=1.0">
+    <title>About</title>
+</head>
+<body>
+    <p style="color: #A5B68D">Car rental agencies primarily serve people who require a temporary vehicle, for example, those who do not own their own car, travelers who are out of town</p>
+    <img src = "{% static 'images/CarRental.png' %}"width="600" height="400" />
+    <ul>
+        <li><a href="{% url 'main:password_view' %}" style="color: #31511E">Generate Password</a></li>
+        <li><a href="{% url 'main:home_view' %}" style="color: #31511E">Home</a></li>
+    </ul>
+
+</body>
+</html>
