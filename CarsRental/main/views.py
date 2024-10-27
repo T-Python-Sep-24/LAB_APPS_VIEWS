@@ -9,7 +9,7 @@ def home(request:HttpRequest):
 
 def about(request:HttpRequest):
 
-    return HttpResponse("A simple paragraph about Car Rentals.")
+    return HttpResponse("This site will let You rent a car online without doing it in your own rent a car online! and go get it and enjoy!")
 
 def password_gen(request:HttpRequest):
     chars=string.ascii_letters+string.digits+string.punctuation
