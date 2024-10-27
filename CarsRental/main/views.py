@@ -5,13 +5,13 @@ import random,string
 
 def home(request:HttpRequest):
 
-    return HttpResponse("Hello World, This is my new HOME for Car Rentals Website  ! we're excited to welcome you here.")
-
+    return render (request,"main/index.html")
 def about(request:HttpRequest):
 
-    return HttpResponse("This site will let You rent a car online without doing it in your own rent a car online! and go get it and enjoy!")
+    return render(request,"main/about.html")
 
 def password_gen(request:HttpRequest):
     chars=string.ascii_letters+string.digits+string.punctuation
     password=[random.choice(chars) for i in range(10)]
-    return HttpResponse(''.join(password))
+    generated_password=''.join(password)
+    return render (request,"main/password_generator.html",context={"password":generated_password})
