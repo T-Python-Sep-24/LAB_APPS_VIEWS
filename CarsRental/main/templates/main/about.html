@@ -1,0 +1,17 @@
+
+{% load static  %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About page </title>
+    </head>
+        <body>
+                <h5>It is a nice car.</h5>
+                <img src="{% static 'images/1bvxiE.jpg' %} " height="200" width="300" ></img>
+                <br>
+                <h5> Make use of dynamic links between pages. </h5> 
+                <a href="{% url 'main:password_view' %}">changed by "dynamic links" to a different page.</a>
+        </body>
+</html>
