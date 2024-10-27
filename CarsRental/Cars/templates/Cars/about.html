@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>About Page</title>
+<style>
+    img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+    ul {
+      list-style-type: none;
+      margin: 0;
+      top:0;
+      left: 0;
+      width: 100%;
+      padding: 20px 100px;
+      position: fixed;
+      background-color: #333;
+    }
+    
+    li {
+      float: left;
+    }
+    
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 10px 200px;
+      text-decoration: none;
+    }
+    </style>
+</head>
+<body>
+<ul>
+    <li><a href="{% url 'Cars:home' %}">Home</a></li>
+    <li><a href="{% url 'Cars:about' %}">About</a></li>
+    <li><a href="{% url 'Cars:password' %}">Generate Password</a></li>
+  </ul>
+  <br><br><br>
+<h1 style="text-align: center;">About Mercedes-Benz G63</h1>
+<p style="text-align: center; border: 2px solid gray;"><i>The Mercedes-Benz G63 is a popular luxury SUV available for rent. Known for its powerful engine, stylish design, and off-road capability, it combines performance with high-end comfort. Renting a G63 can be a great choice for those wanting a unique driving experience or to make a statement at events. Many car rental companies offer this model for short-term or long-term rentals, allowing customers to enjoy its advanced features and luxury feel without committing to ownership.</i></p>
+<br>
+<img src="{% static 'images/G63.png' %}" />
+
+</body>
+</html>

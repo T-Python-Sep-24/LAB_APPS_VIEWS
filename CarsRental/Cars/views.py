@@ -4,10 +4,10 @@ import random
 import string
 # Create your views here.
 def home(request):
-    return HttpResponse("Hello World, This is my new HOME for Car Rentals Website  ! we're excited to welcome you here.")
+    return render(request , 'Cars/home.html')
 def about(request):
-    return HttpResponse("A simple paragraph about Car Rentals.")
+    return render(request , 'Cars/about.html')
 def password(request):
     char=string.ascii_letters + string.digits + string.punctuation
     password = ''.join(random.choice(char)for i in range(10))
-    return HttpResponse(password)
+    return render(request,'Cars/password.html',{'password':password})

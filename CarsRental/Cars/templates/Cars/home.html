@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home Page</title>
+<style>
+    ul {
+      list-style-type: none;
+      margin: 0;
+      top:0;
+      left: 0;
+      width: 100%;
+      padding: 20px 100px;
+      position: fixed;
+      background-color: #333;
+    }
+    
+    li {
+      float: left;
+    }
+    
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 10px 200px;
+      text-decoration: none;
+    }
+    
+    li a:hover:not(.active) {
+      background-color: #111;
+    }
+    
+    .active {
+      background-color: #04AA6D;
+    }
+    </style>
+</head>
+<body>
+<ul>
+    <li><a href="{% url 'Cars:home' %}">Home</a></li>
+    <li><a href="{% url 'Cars:about' %}">About</a></li>
+    <li><a href="{% url 'Cars:password' %}">Generate Password</a></li>
+  </ul>
+  <br><br><br><br>
+  <h1 style="text-align: center;"> <i>Hello World, This is my new HOME for Car Rentals Website  ! we're excited to welcome you here.</i></h1>
+</body>
+</html>
