@@ -6,17 +6,14 @@ import random
 # Create your views here.
 
 def index_view(request:HttpRequest):
-    return HttpResponse("Hello World, This is my new HOME for Car Rentals Website  ! we're excited to welcome you here.")
-
+    return render(request, 'main/index.html')
 
 def about_view(request:HttpRequest):
-    return HttpResponse("A simple paragraph about Car Rentals.")
+    return render(request, 'main/about.html')
 
 def password_view(request: HttpRequest):
-    length = 10  
+    length = 10  # Fixed length of 10
     all_characters = string.ascii_letters + string.digits + string.punctuation
     password = ''.join(random.choices(all_characters, k=length))
-    print(password)  
-
-    return HttpResponse(password)
+    return render(request, 'main/password_generator.html', {'password': password})
 

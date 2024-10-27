@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us Page</title>
+    {% load static %}  
+</head>
+<body>
+    <nav>
+        <a href="{% url 'main:index_view' %}">Back to Home</a>
+    </nav>
+
+    <h1>About Us</h1>
+    <p>Welcome to the About Us page!</p>
+    <h2>A simple paragraph about Car Rentals.</h2>
+
+
+    <img src="{% static 'images/CarsRental.jpeg' %}" alt="About Us" style="width:300px;height:auto;">
+</body>
+</html>
