@@ -7,12 +7,12 @@ import random
 
 def home_view(request:HttpRequest):
 
-    return HttpResponse("Hello World, This is my new HOME for Car Rentals Website  ! we're excited to welcome you here.")
+    return render(request, "main/home.html")
 
 
 def about_view(request:HttpRequest):
     
-    return HttpResponse("Car rentals offer a convenient and flexible way for individuals and businesses to access vehicles without the long-term commitment of ownership. Whether for a weekend getaway, a business trip, or everyday errands, renting a car allows customers to choose from a diverse fleet that suits their specific needs.")
+    return render(request, "main/about.html")
 
 
 def pass_generator_view(request:HttpRequest):
@@ -24,4 +24,4 @@ def pass_generator_view(request:HttpRequest):
         char=random.choice(characters)
         password+=char
         
-    return HttpResponse(password)
+    return render(request, "main/pass_generator.html", context={"password":password})

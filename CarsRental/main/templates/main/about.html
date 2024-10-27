@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="{% static 'css/page.css' %}">
+</head>
+<body>
+
+<header>
+    <a href="{% url 'main:home_view'%}">Home</a>
+
+    <h1>About Us</h1>
+    <p>We offer a wide range of rental cars to suit your needs, whether for business or leisure. Explore the city at your own pace with our reliable vehicles.</p>
+    <img src="{% static 'images/car.jpg' %}"/>
+</header>
+
+
+
+</body>
+</html>
