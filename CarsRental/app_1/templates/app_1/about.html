@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    {% load static %}
+</head>
+<body>
+   <h1>About Us</h1>
+    <img src="{% static 'app_1/images/aboutUs.jpg' %}" alt="About Us Image" />
+    <p>Car rental is when you rent a car.</p>
+    <nav>
+        <a href="{% url 'page_view' %}">Home</a> |
+        <a href="{% url 'rand_pass' %}">Password Generator</a>
+    </nav>
+
+</body>
+</html>

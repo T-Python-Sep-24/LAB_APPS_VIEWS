@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+</head>
+<body>
+    <h1>Password Generator</h1>
+    <p>Your randomly generated password: <strong>{{ password }}</strong></p>
+    <nav>
+        <a href="{% url 'page_view' %}">Home</a> |
+        <a href="{% url 'about' %}">About Us</a>
+    </nav>
+</body>
+</html>
