@@ -1,20 +1,15 @@
 from django.shortcuts import render
-from django.http import HttpRequest, HttpResponse
-
+from django.http import HttpResponse
 import random
 import string
 
 def home(request):
-    return HttpResponse("Hello World, This is my new HOME for Car Rentals Website! We're excited to welcome you here.")
+    return render(request, 'home.html')  
 
 def about(request):
-    return HttpResponse("A simple paragraph about Car Rentals.")
+    return render(request, 'about.html')  
 
 def generate_password(request):
     characters = string.ascii_letters + string.digits + string.punctuation
-    password = ""
-    
-    for index in range(10):
-        password += random.choice(characters)  
-    
+    password = ''.join(random.choice(characters) for _ in range(10))
     return HttpResponse(password)
