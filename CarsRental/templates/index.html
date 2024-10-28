@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+        <nav>
+            <a href="{% url 'main:about_view'%}">About Us</a>
+            <a href="{% url 'main:password_generator_view'%}">Password Generator</a>
+        </nav>
+        <h1>Welcome to Our Car Rentals Website!</h1>
+        <p>We're excited to have you here.</p>
+    </body>
+</html>
