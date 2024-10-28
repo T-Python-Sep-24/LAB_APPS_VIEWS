@@ -7,12 +7,12 @@ from password_generator.generator import PasswordGenerator
 
 # Create your views here.
 def home_view(request: HttpRequest):
-    text: str = "Hello World, This is my new HOME for Car Rentals Website  ! we're excited to welcome you here."
-    return HttpResponse(text)
+
+    return render(request, "main/home.html")
 
 def about_view(request: HttpRequest):
-    about_text: str = "Car Rentals was established in 1994. we have more than 180 branches world wide"
-    return HttpResponse(about_text)
+
+    return render(request, "main/about.html")
 
 def password_generate_view(request: HttpRequest):
     # create an instance of the PasswordGenerator class
@@ -31,4 +31,4 @@ def password_generate_view(request: HttpRequest):
     # call generate method
     password = generator.generate()
 
-    return HttpResponse(password)
+    return render(request, "main/password_generate.html", context = {"password_key": password})
