@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}  <!-- Load static files -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rentals</title>
+</head>
+<body>
+    <h1>Hello World, This is my new HOME for Car Rentals Website! We're excited to welcome you here.</h1>
+    
+    <!-- Include the image -->
+    <img src="{% static 'images/car_image.avif' %}" alt="Car Rentals">
+    <nav>
+        <ul>
+            <li><a href="{% url 'main:about_view' %}">About us</a></li>
+            <li><a href="{% url 'main:generate_password' %}">Password Generator</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
