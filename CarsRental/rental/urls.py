@@ -1,8 +1,10 @@
 from django.urls import path
-from .views import home, about, generate_password
+from . import views
+
+app_name = 'rental'
 
 urlpatterns = [
-    path('', home, name='home'),
-    path('about/', about, name='about'),
-    path('password/generate/', generate_password, name='generate_password'),
+    path('', views.home, name='home'),
+    path('about/', views.about, name='about'),
+    path('generate_password/', views.generate_password, name='generate_password'),
 ]
